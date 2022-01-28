@@ -1,6 +1,6 @@
 local timer_check = 5 -- seconds per check
 local flight_secs = 5 * 60 -- seconds of flight
-local S = ethereal.intllib
+local S = hawk.intllib
 
 
 -- disable flight
