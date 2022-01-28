@@ -65,7 +65,7 @@ local function hawk_set_flight(user)
 	meta:set_string("hawk:fly_timer", timer)
 
 	minetest.after(timer_check, function()
-		ethereal_set_flight(user)
+		hawk_set_flight(user)
 	end)
 end
 
@@ -85,7 +85,7 @@ minetest.register_on_joinplayer(function(player)
 	if privs.fly and timer and timer > 0 then
 
 		minetest.after(timer_check, function()
-			ethereal_set_flight(player)
+			hawk_set_flight(player)
 		end)
 	end
 end)
@@ -136,7 +136,7 @@ minetest.register_node("hawk:samosa", {
 				minetest.get_color_escape_sequence("#1eff00")
 						.. S("Flight granted, you have @1 seconds!", flight_secs))
 
-		ethereal_set_flight(user)
+		hawk_set_flight(user)
 
 		-- take item
 		itemstack:take_item()
@@ -145,8 +145,8 @@ minetest.register_node("hawk:samosa", {
 minetest.register_craft({
 	output = "hawk:samosa",
 	recipe = {
-		{"ethereal:etherium_dust", "ethereal:etherium_dust", "ethereal:etherium_dust"},
-		{"ethereal:etherium_dust", "ethereal:fire_dust", "ethereal:etherium_dust"},
-		{"ethereal:etherium_dust", "vessels:glass_bottle", "ethereal:etherium_dust"},
+		{"farming:potato", "farming:potato", ""},
+		{"farming:carrot", "farming:potato", "farming:wheat"},
+		{"farming:wheat", "", "farming:flour"},
 	}
 })
