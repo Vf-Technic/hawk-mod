@@ -1,7 +1,5 @@
 -- Hawk Mods
 -- January 2022
--- https://github.com/mrbid/Minetest-Worldmods
-
 -- Space Carrot
 minetest.register_craftitem("hawk:space_carrot", {
 	description = "Teleportation Carrot",
@@ -160,7 +158,6 @@ minetest.register_craft({
 minetest.register_tool("hawk:blood_sucker", {
 	description = "Bone breaker",
 	inventory_image = "blood_sucker.png",
-	--wield_scale = {x=3,y=3,z=3},
 	tool_capabilities = {
 		full_punch_interval = 1.5,
 		max_drop_level=5,
