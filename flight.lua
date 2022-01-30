@@ -24,7 +24,7 @@ end
 
 
 -- after function
-local function hawk_set_flight(user)
+local function hawk_set_flight(player)
 
 	local meta = user:get_meta() ; if not meta then return end
 	local timer = tonumber(meta:get_string("hawk:fly_timer"))
